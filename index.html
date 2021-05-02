@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app="" >
+            <input type="text" ng-model="largura" placeholder="largura">
+            <input type="text" ng-model="altura" placeholder="altura">
+            <input type="text" ng-model="cor" placeholder="cor">
+            <input type="text" ng-model="radius" placeholder="circunferencia">
+            <div style="width:{{largura + 'px'}}; height:{{altura +'px'}}; background-color:{{cor}}; border-radius:{{radius +'px'}};"></div>
+        </div>
+        <div style="width: 100px; height: 100px; background-color: aqua;">
+
+        </div>
+    </body>
+</html>
