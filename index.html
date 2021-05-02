@@ -4,25 +4,35 @@
         <meta charset="utf-8"/>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<<<<<<< HEAD
-=======
-
->>>>>>> 68610e6e80fcad81d382a1bcd699de098baa8b88
     </head>
     <body>
-        <div ng-app="" ng-init="cor='yellow'; largura='200'; altura='200';" >
-            <input type="text" ng-model="largura" placeholder="largura">
-            <input type="text" ng-model="altura" placeholder="altura">
-            <input type="text" ng-model="cor" placeholder="cor">
-            <input type="text" ng-model="radius" placeholder="circunferencia">
-            <div style="width:{{largura + 'px'}}; height:{{altura +'px'}}; background-color:{{cor}}; border-radius:{{radius +'px'}};"></div>
-            <h1>"width:{{largura + 'px'}}; height:{{altura +'px'}}; background-color:{{cor}}; border-radius:{{radius +'px'}};"</h1>
-        </div>
-<<<<<<< HEAD
-=======
-        
->>>>>>> 68610e6e80fcad81d382a1bcd699de098baa8b88
+        <div ng-app="myDivs" ng-controller="Divcontroller">
+            <input type="number" ng-model="width">
+            <input type="number" ng-model="altura">
+            <input type="text" ng-model="color">
+            <button id="criarDiv">Criar</button>
 
         </div>
+        
+        <script>
+            var btn = document.getElementById('criarDiv');
+            var app = angular.module('myDivs',[]);
+            app.controller('Divcontroller',function($scope){
+                btn.addEventListener('click',function(){
+                    var div = document.createElement('div');
+                    var lugar =document.querySelector('div');
+                    div.style="width:"+ $scope.width+"px; height:"+ $scope.altura +"px; background-color:"+$scope.color+";";
+                    lugar.appendChild(div);
+                    
+                
+                });
+            });
+            
+            
+            
+
+            
+
+        </script>
     </body>
 </html>
